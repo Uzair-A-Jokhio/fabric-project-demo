@@ -9,35 +9,43 @@ This guide provides a short way to run the API for non-Python users, assuming Py
     * Save the API Python code (provided earlier) as `main.py` in `fabric_api/`.
 
     ```
-    fabric_api/
-    ├── main.py
-    └── models/
+     main.py
+     models/
         └── demo_3_classifier.h5
     ```
 
-2.  **Open Terminal/Command Prompt:** Navigate to your `fabric_api` folder.
-
-3.  **Create Virtual Environment:**
+2.  **Create Virtual Environment:**
     ```bash
     python -m venv venv
     ```
 
-4.  **Activate Virtual Environment:**
-    * **Windows:** `.\venv\Scripts\activate`
-    * **macOS/Linux:** `source venv/bin/activate`
+3.  **Activate Virtual Environment:**
+    * **Windows:**
+      ```
+      .\venv\Scripts\activate
+      ```
+    * **macOS/Linux:**
+      ```
+      source venv/bin/activate
+      ```
 
-5.  **Install Libraries:**
+4.  **Install Libraries:**
     ```bash
     pip install -r requirements.txt
     ```
 
-6.  **Run FastAPI Server:**
+5.  **Run FastAPI Server:**
     ```bash
     uvicorn main:app --reload
     ```
 
-7.  **Use the API:**
+6.  **Use the API:**
     * **Welcome Page:** Open your browser to `http://localhost:8000/`.
     * **Prediction:** Use the provided HTML frontend (update `API_URL` to `http://localhost:8000/predict/`) to upload images and get predictions.
 
 **Keep the terminal window with the server running.**
+
+7. **To Deactivate**
+   ```
+   deactivate
+   ```
