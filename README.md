@@ -3,11 +3,6 @@
 This guide provides a short way to run the API for non-Python users, assuming Python is already installed.
 
 1.  **Prepare Project Folder:**
-    * Create a folder (e.g., `fabric_api`).
-    * Inside, create a folder named `models`.
-    * Place your model file (`demo_3_classifier.h5`) in `models/`.
-    * Save the API Python code (provided earlier) as `main.py` in `fabric_api/`.
-
     ```
      main.py
      models/
