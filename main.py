@@ -10,11 +10,10 @@ import base64
 
 app = FastAPI()
 
-# Enable CORS to allow requests from your frontend (adjust origins as needed)
 origins = [
     "http://localhost",
     "http://localhost:8080",
-    "*",  # Caution: This allows all origins. Specify your frontend's origin in production.
+    "*",  
 ]
 
 app.add_middleware(
@@ -25,8 +24,6 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-# --- IMPORTANT: Load your trained model here ---
-# Replace 'path/to/your/saved_model.h5' with the actual path to your saved model file.
 try:
     model_path = 'models/demo_3_classifier.h5'
     model = tf.keras.models.load_model(model_path, compile=False)
@@ -35,8 +32,7 @@ except Exception as e:
     print(f"Error loading model: {e}")
     model = None
 
-# Define your class labels
-CLASS_NAMES = ["abstract_pattern", "animals_pattern", "birds_pattern"]
+CLASS_NAMES = ["abstract_pattern", "animals_pattern", "birds_pattern"] # <----- class labels that the model will predict !!!!
 IMG_HEIGHT = 224
 IMG_WIDTH = 224
 
