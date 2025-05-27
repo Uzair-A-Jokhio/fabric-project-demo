@@ -3,3 +3,4 @@ uvicorn  # Uvicorn is the ASGI server that runs FastAPI
 tensorflow
 numpy
 Pillow 
+python-multipart
