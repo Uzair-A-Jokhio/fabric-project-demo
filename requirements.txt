@@ -1,6 +1,9 @@
 fastapi
-uvicorn  # Uvicorn is the ASGI server that runs FastAPI
+uvicorn  
 tensorflow
 numpy
 Pillow 
 python-multipart
+opencv-python
+scikit-learn
+matplotlib

@@ -6,7 +6,7 @@ This guide provides a short way to run the API for non-Python users, assuming Py
     ```
      main.py
      models/
-        └── demo_3_classifier.h5
+     color_model/
     ```
 
 2.  **Create Virtual Environment:**
@@ -36,7 +36,7 @@ This guide provides a short way to run the API for non-Python users, assuming Py
 
 6.  **Use the API:**
     * **Welcome Page:** Open your browser to `http://localhost:8000/`.
-    * **Prediction:** Use the provided HTML frontend (update `API_URL` to `http://localhost:8000/predict/`) to upload images and get predictions.
+    * **Documetation:** Use the Swagger UI (`http://localhost:8000/docs`) for API documenation.
 
 **Keep the terminal window with the server running.**
 
