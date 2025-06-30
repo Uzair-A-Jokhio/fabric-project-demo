@@ -34,9 +34,18 @@ async def predict_pattern(file: UploadFile = File(...)):
         label = int(np.argmax(pred))
         confidence = float(np.max(pred))
         LABEL_NAMES = {
-            0: "geometric_abstract",
-            1: "nature_themed",
-            2: "solid_plain"
+            0: "abstract_graphic",
+            1: "animals",
+            2: "birds",
+            3: "checks",
+            4: "damasks",
+            5: "floral",
+            6: "geometric",
+            7: "kids",
+            8: "leaf_trees",
+            9: "plains_textures",
+            10: "spots",
+            11: "stripes"
         }
         return {
             "fabric_pattern": {
