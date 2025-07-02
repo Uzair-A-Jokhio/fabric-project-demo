@@ -5,6 +5,7 @@ import tensorflow as tf
 from PIL import Image
 import numpy as np
 from color_model.color_predictor import predict_combined_colors
+from color_model.color_12_predict import get_dominant_color
 import os
 
 app = FastAPI()
@@ -66,15 +67,18 @@ async def predict_type(file: UploadFile = File(...)):
         label = int(np.argmax(pred))
         confidence = float(np.max(pred))
         labels = {
-            0: "Blend",
-            1: "Denim",
-            2: "NaturalFibers",
-            3: "Other",
-            4: "Smooth",
-            5: "SyntheticFibers",
-            6: "Textured",
-            7: "Unclassified",
-
+            0: "Acrylic",
+            1: "Blended",
+            2: "Cotton",
+            3: "Denim",
+            4: "Fleece",
+            5: "Fur",
+            6: "Leather",
+            7: "Other",
+            8: "Polyester",
+            9: "Silk",
+            10: "Velvet",
+            11: "Wool"
         }
         return {
             "fabric_type": {
@@ -90,7 +94,7 @@ async def predict_type(file: UploadFile = File(...)):
 async def predict_color(file: UploadFile = File(...)):
     image_path = save_temp_image(file)
     try:
-        colors = predict_combined_colors(image_path)
+        colors = get_dominant_color(image_path)
         return {
             "dominant_colors": colors
         }
