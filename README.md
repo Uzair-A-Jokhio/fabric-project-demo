@@ -1,46 +1,50 @@
-# Fabric Pattern Classifier API - Quick Start
+# Fabric Model 
+Classifier Model - which predict 12 classes of Fabric 
 
-This guide provides a short way to run the API for non-Python users, assuming Python is already installed.
 
-1.  **Prepare Project Folder:**
-    ```
-     main.py
-     models/
-     color_model/
-    ```
+<table>
+  <tr>
+    <td align="center"><img src="misc/acrylic.png" width="120"/><br/>Acrylic</td>
+    <td align="center"><img src="misc/blended.png" width="120"/><br/>Blended</td>
+    <td align="center"><img src="misc/cotton.png" width="120"/><br/>Cotton</td>
+    <td align="center"><img src="misc/denim.png" width="120"/><br/>Denim</td>
+  </tr>
+  <tr>
+    <td align="center"><img src="misc/fleece.png" width="120"/><br/>Fleece</td>
+    <td align="center"><img src="misc/fur.jpeg" width="120"/><br/>Fur</td>
+    <td align="center"><img src="misc/leather.png" width="120"/><br/>Leather</td>
+    <td align="center"><img src="misc/polyester.png" width="120"/><br/>Polyester</td>
+  </tr>
+  <tr>
+    <td align="center"><img src="misc/silk.png" width="120"/><br/>Silk</td>
+    <td align="center"><img src="misc/velvet.png" width="120"/><br/>Velvet</td>
+    <td align="center"><img src="misc/wool.png" width="120"/><br/>Wool</td>
+    <td align="center"><img src="path/to/image12.png" width="120"/><br/>other</td>
+  </tr>
+</table>
 
-2.  **Create Virtual Environment:**
-    ```bash
-    python -m venv venv
-    ```
 
-3.  **Activate Virtual Environment:**
-    * **Windows:**
-      ```
-      .\venv\Scripts\activate
-      ```
-    * **macOS/Linux:**
-      ```
-      source venv/bin/activate
-      ```
+# Pattern Model 
 
-4.  **Install Libraries:**
-    ```bash
-    pip install -r requirements.txt
-    ```
+Classifier Model - which predict 12 classes of Pattern 
 
-5.  **Run FastAPI Server:**
-    ```bash
-    uvicorn main:app --reload
-    ```
-
-6.  **Use the API:**
-    * **Welcome Page:** Open your browser to `http://localhost:8000/`.
-    * **Documetation:** Use the Swagger UI (`http://localhost:8000/docs`) for API documenation.
-
-**Keep the terminal window with the server running.**
-
-7. **To Deactivate**
-   ```
-   deactivate
-   ```
+<table>
+  <tr>
+    <td align="center"><img src="misc/1abstract_graph.jpg" width="120"/><br>abstract_graph</td>
+    <td align="center"><img src="misc/2animals.jpg" width="120"/><br/>Animals</td>
+    <td align="center"><img src="misc/3birds.jpg" width="120"/><br/>Birds</td>
+    <td align="center"><img src="misc/4checks.jpg" width="120"/><br/>Checks</td>
+  </tr>
+  <tr>
+    <td align="center"><img src="misc/5damasks.jpg" width="120"/><br/>Damaks</td>
+    <td align="center"><img src="misc/6floral.jpg" width="120"/><br/>Floral</td>
+    <td align="center"><img src="misc/7geometric.jpg" width="120"/><br/>Geometric</td>
+    <td align="center"><img src="misc/8kids.jpg" width="120"/><br/>Kids</td>
+  </tr>
+  <tr>
+    <td align="center"><img src="misc/9leaf_trees.jpg" width="120"/><br/>Leafs Trees</td>
+    <td align="center"><img src="misc/10plains_texture.jpg" width="120"/><br/>Plain texture</td>
+    <td align="center"><img src="misc/11spots.jpg" width="120"/><br/>Spots</td>
+    <td align="center"><img src="misc/12stripes.jpg" width="120"/><br/>Stripes</td>
+  </tr>
+</table>
