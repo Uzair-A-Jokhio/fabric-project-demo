@@ -1,5 +1,15 @@
+# Fabric-Pattern-Color Classifier Model API 
+A FastAPI-based image classification API that predicts:
+
+- Fabric type (12 classes like Cotton, Wool, Denim, etc.)
+- Pattern type (12 classes like Floral, Geometric, Stripes, etc.)
+- Dominant colors from an image
+
+This project uses TensorFlow (MobileNetV2) for the fabric & pattern classifiers and KMeans clustering for dominant color extraction.
+
 # Fabric Model 
-Classifier Model - which predict 12 classes of Fabric 
+- **Architecture:** MobileNetV2 (transfer learning)
+- **Classes:** 12 types of fabrics
 
 
 <table>
@@ -25,8 +35,8 @@ Classifier Model - which predict 12 classes of Fabric
 
 
 # Pattern Model 
-
-Classifier Model - which predict 12 classes of Pattern 
+- **Architecture:** MobileNetV2 (transfer learning)
+- **Classes:** 12 types of patterns
 
 <table>
   <tr>
@@ -48,3 +58,8 @@ Classifier Model - which predict 12 classes of Pattern
     <td align="center"><img src="misc/12stripes.jpg" width="120"/><br/>Stripes</td>
   </tr>
 </table>
+
+# Color Model
+
+- **Method:** KMeans clustering on image pixels (OpenCV + scikit-learn)
+- **Goal:** Extract dominant color and map to the nearest known color name
